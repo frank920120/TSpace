@@ -1,0 +1,32 @@
+.sold-counter-container{
+    .counter-box{
+        font-size: 5rem;
+        font-weight: bold;
+    }
+
+    .counter-digit-box{
+        border: 2px solid black;
+        padding: 5px 10px;
+    }
+
+    .counter-digit-box{
+        margin-left: 1px;
+        margin-right: 1px;
+    }
+
+    .digit-jump{
+        // transition: all 1s ease;
+        animation: numJump 3s ease;
+    }
+
+    @keyframes numJump {
+        0%{
+            opacity: 0;
+        }
+        100%{
+           opacity: 1;
+        }
+    }
+
+ 
+}
