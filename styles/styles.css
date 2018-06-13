@@ -154,4 +154,21 @@ body {
     grid-column: 11 / 15;
     grid-row: 2 / 3; }
 
+.sold-counter-container .counter-box {
+  font-size: 5rem;
+  font-weight: bold; }
+.sold-counter-container .counter-digit-box {
+  border: 2px solid black;
+  padding: 5px 10px; }
+.sold-counter-container .counter-digit-box {
+  margin-left: 1px;
+  margin-right: 1px; }
+.sold-counter-container .digit-jump {
+  animation: numJump 3s ease; }
+@keyframes numJump {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
 /*# sourceMappingURL=styles.css.map */
