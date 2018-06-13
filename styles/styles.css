@@ -26,7 +26,8 @@ body {
   height: 80px;
   top: 0;
   left: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)); }
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+  background: green; }
   .main-nav .nav-left {
     display: flex;
     align-items: center;
