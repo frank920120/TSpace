@@ -1,0 +1,136 @@
+.glasses-banner{
+
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+
+        .glasses-banner-left{
+            @include gridSpan(1,6);
+            background-color: #594f45;
+            position: relative;
+            .banner-text{
+                position: absolute;
+                color: white;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+              
+                h2{
+                    font-size: 48px;
+                }
+                p{
+                    font-size: 18px;
+                  
+                }
+            }
+
+        }
+        .glasses-banner-right{
+            @include gridSpan(7,12);
+        }
+        
+        @media screen and (max-width:$tablet-landscape) {
+            .glasses-banner-left{
+                @include gridSpan(1,12);
+                .banner-text{
+                    position: relative;
+                    h2,p{
+                        margin: 0;
+                        padding: 10px 15px;
+                        text-align: center;
+                    }
+                }
+            }
+            .glasses-banner-right{
+                @include gridSpan(1,12);
+
+            }
+        }
+    
+        img{
+            display: block;
+        }
+    }
+   
+.glasses-show{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-gap: 20px;
+    padding: 20px;
+    
+
+    .item-box{
+        grid-column: span 3;
+        position: relative;
+
+        .glass-text{
+            background-color: rgba($color: #000000, $alpha: 0.6);
+            color: white;
+            position:absolute;
+            z-index: 1000;
+            top: 0;
+            width: 100%;
+            h3,p{
+                margin: 0;
+                padding: 5px 10px 0;
+            }
+            img{
+                display: block;
+            }
+        
+    
+             }
+
+    .item-button-group{
+        font-size: 40px;
+        z-index: 1000;
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        top: 60%;
+        display: none;
+
+        span{
+            color: white;
+            padding: 15px;
+            cursor: pointer;
+            
+        }
+
+        span:hover i{
+            transform: scale(1.3);
+            transition: all 0.5s ease;
+        }
+
+
+     }    
+
+    }
+
+
+    .cover{
+        position: absolute;
+        top:0;
+        left: 0;
+        z-index: 999;
+        background-color:black;
+        opacity: 0.8;
+        width: 100%;
+        height: 100%;
+        display: none;
+    }
+
+    @media screen and (max-width:$tablet-landscape) {
+        .item-box{
+            grid-column: span 6;
+        }
+    }
+
+    @media screen and (max-width:$phone-wide) {
+        .item-box{
+            grid-column: span 12;
+        }
+    }
+    
+
+
+}

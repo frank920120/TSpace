@@ -1,0 +1,39 @@
+.shop-banner{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    position: relative;
+
+    img{
+        @include gridSpan(1,6);
+        width: 100%;
+       
+     
+    }
+    h1{
+
+        font-weight: normal;
+        text-decoration: underline;
+        position: absolute;
+        width: 50vw;
+        font-size: 40px;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background-color: rgba($color: #000000, $alpha: 0.8);
+        color: white;
+        padding: 60px;
+        span{
+            font-weight: bold;
+        }
+    }
+
+    @media screen and (max-width:$phone-wide) {
+        h1{
+            font-size: 20px;
+            padding: 20px;
+            top: 40%;
+        }
+    }
+
+}
