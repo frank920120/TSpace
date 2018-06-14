@@ -1,5 +1,20 @@
 $(document).ready(function() {
 
+    window.sr = ScrollReveal();
+    sr.reveal('.explore', { 
+        origin: 'right', 
+        duration: 1000 
+      });
+      sr.reveal('.products', { 
+        origin: 'right', 
+        duration: 500 
+      });
+      sr.reveal('.service-content', { 
+        origin: 'right', 
+        duration: 1000 
+      });
+
+
 // slideshow
     $('.home-slideshow').slick(
         {
@@ -36,7 +51,7 @@ let soldCounter = 203800;
             
         }
         lastCounterNumberArray = conuterStringArray;
-        $('#counter-box').html(counterNumberText);
+        $('#counter-box').html(counterNumberText); 
 
     },4000);
 
@@ -55,6 +70,5 @@ $('.date').html(datetime);
 
 
 });
-
 
 
