@@ -1,7 +1,8 @@
 .explore-container{
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    grid-template-rows: 150px repeat(5,350px);
+    // grid-template-rows: 150px repeat(5,350px);
+    grid-template-rows:auto;
 
     h1{
 
@@ -31,6 +32,7 @@
     -ms-transform: translateZ(0);
     -o-transform: translateZ(0);
     transform: translateZ(0);
+    display: block;
     }
     .cover{
         position: absolute;
@@ -65,13 +67,19 @@
 
         @include grid(4,5,2,3);
         background-color: #0f7cd4;
-        
        .explore-text01{
-           margin-top:50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+           height: 100%;
+
         h1{
+        
         text-decoration: none;
         color:white;
         text-align: center;
+        margin:0 auto;
         
         }
 
@@ -118,8 +126,35 @@
     .explore11{
         @include grid(2,3,3,4);
         background-color: yellow;
+        img{
+            width: 60%;
+            height: 60%;
+            margin:0 auto;
+
+        }
 
     }
 
 
+    @media only screen and (max-width:$phone-wide){
+
+        h1{
+            font-size: 40px;
+
+
+        }
+        img{
+            display: block;
+
+        }
+        .explore-text01{
+         h1{
+            font-size: 25px;
+            margin-bottom: 10px;
+         }
+
+    }
+
+
+}
 }
