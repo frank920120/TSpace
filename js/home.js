@@ -107,46 +107,46 @@ $('.date').html(datetime);
 
 
 // });
-$('.menu').click(function(){
+// $('.menu').click(function(){
 
-    $('.nav-right').slideToggle();
+//     $('.nav-right').slideToggle();
 
-});
+// });
 
-var Menu = {
+// var Menu = {
   
-    el: {
-      ham: $('.menu'),
-      menuTop: $('.menu-top'),
-      menuMiddle: $('.menu-middle'),
-      menuBottom: $('.menu-bottom')
-    },
+//     el: {
+//       ham: $('.menu'),
+//       menuTop: $('.menu-top'),
+//       menuMiddle: $('.menu-middle'),
+//       menuBottom: $('.menu-bottom')
+//     },
     
-    init: function() {
-      Menu.bindUIactions();
-    },
+//     init: function() {
+//       Menu.bindUIactions();
+//     },
     
-    bindUIactions: function() {
-      Menu.el.ham
-          .on(
-            'click',
-          function(event) {
-          Menu.activateMenu(event);
-          event.preventDefault();
-        }
-      );
-    },
+//     bindUIactions: function() {
+//       Menu.el.ham
+//           .on(
+//             'click',
+//           function(event) {
+//           Menu.activateMenu(event);
+//           event.preventDefault();
+//         }
+//       );
+//     },
     
-    activateMenu: function() {
-      Menu.el.menuTop.toggleClass('menu-top-click');
-      Menu.el.menuMiddle.toggleClass('menu-middle-click');
-      Menu.el.menuBottom.toggleClass('menu-bottom-click'); 
-    }
-  };
+//     activateMenu: function() {
+//       Menu.el.menuTop.toggleClass('menu-top-click');
+//       Menu.el.menuMiddle.toggleClass('menu-middle-click');
+//       Menu.el.menuBottom.toggleClass('menu-bottom-click'); 
+//     }
+//   };
   
-  Menu.init();
+//   Menu.init();
 
-});
+// });
 
 
 // $('.img-div').mouseover(function(){
@@ -165,3 +165,7 @@ var Menu = {
  },function(){
     $(this).find('.products-cover').slideUp();
  });
+
+
+
+});
