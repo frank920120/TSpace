@@ -1,4 +1,8 @@
 .sold-counter-container{
+    display: grid;
+    grid-template-columns: (16,1fr);
+    grid-template-rows: 80px 80px 150px 80px 80px;
+    font-weight: normal;
     .counter-box{
         font-size: 5rem;
         font-weight: bold;
@@ -28,5 +32,67 @@
         }
     }
 
- 
+    .counter-header{
+        grid-column: 1/17;
+        font-weight: normal;
+        text-decoration: underline;
+        letter-spacing: 10px;
+        text-align: center;
+        span{
+            font-weight: bold;
+
+        }
+
+    }
+
+    .counter-title{
+
+        @include grid(4,8,2,3);
+        font-weight: normal;
+        text-align: center;
+    }
+    .date{
+
+        @include grid(11,13,2,3);
+        font-weight: normal;
+        text-align: center;
+
+    }
+    .counter-box{
+        align-self:center;
+        @include grid(4,10,3,4);
+        text-align: right;
+        font-weight: normal;
+    }
+    .plusone{
+margin:0;
+@include grid(10,11,3,4);
+font-size: 100px;
+font-weight: normal;
+        span{
+            color:red;
+        }
+    }
+    p{
+       @include grid(1,17,4,5);
+       text-align: center;
+        align-self: center;
+        span{
+            color:red;
+                    
+        }
+    }
+    a{
+
+        @include grid(1,17,5,6);
+        display: block;
+        margin:0 auto;
+        background-color: black;
+        color:white;
+        text-decoration: none;
+        height: 50px;
+        padding: 10px;
+        font-size: 20px;
+
+    }
 }
