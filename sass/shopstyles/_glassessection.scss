@@ -1,0 +1,59 @@
+.glasses-banner{
+
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+
+        .glasses-banner-left{
+            @include gridSpan(1,6);
+            background-color: #594f45;
+            position: relative;
+            .banner-text{
+                position: absolute;
+                color: white;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+              
+                h2{
+                    font-size: 51px;
+                }
+                p{
+                    font-size: 18px;
+                  
+                }
+            }
+
+        }
+        .glasses-banner-right{
+            @include gridSpan(7,12);
+        }
+        
+        @media screen and (max-width:$tablet-landscape) {
+            .glasses-banner-left{
+                @include gridSpan(1,12);
+                .banner-text{
+                    position: relative;
+                    h2,p{
+                        margin: 0;
+                        padding: 10px 15px;
+                        text-align: center;
+                    }
+                }
+            }
+            .glasses-banner-right{
+                @include gridSpan(1,12);
+
+            }
+        }
+    
+        img{
+            display: block;
+        }
+    }
+   
+.glasses-show{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+
+    
+}
