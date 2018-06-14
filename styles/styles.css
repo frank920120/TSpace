@@ -26,7 +26,7 @@ body {
   height: 80px;
   top: 0;
   left: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)); }
+  background: linear-gradient(rgba(0, 0, 0, 0.6), transparent); }
   .main-nav .nav-left {
     display: flex;
     align-items: center;
@@ -280,13 +280,7 @@ body {
     text-align: right;
     font-weight: normal; }
   .sold-counter-container .plusone {
-    margin: 0;
-    grid-column: 11 / 12;
-    grid-row: 3 / 4;
-    font-size: 100px;
-    font-weight: normal; }
-    .sold-counter-container .plusone span {
-      color: red; }
+    color: red; }
   .sold-counter-container p {
     grid-column: 1 / 17;
     grid-row: 4 / 5;

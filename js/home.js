@@ -30,17 +30,25 @@ $(document).ready(function() {
       
       );
 // counter
+    let dateCovert = Date.parse(new Date());
+    let soldCounter = parseInt((Math.floor((dateCovert/3600)/24/365))*13.8/3+15629);
+    let lastCounterNumberArray = soldCounter.toString().split("");
+    let counterNumberText = "";
+    for(let i=0;i<lastCounterNumberArray.length;i++)
+        {
+                counterNumberText += `<span class="counter-digit-box"><b>${lastCounterNumberArray[i]}</b></span>`;
+        }
+        counterNumberText += `<span>+<b class="plusone">1</b></span>`;
+        $('#counter-box').html(counterNumberText); 
 
-let soldCounter = 203800;
-    let lastCounterNumberArray = ["2","0","3","8","0","0"]; 
     setInterval(function(){
         const ranNum = (Math.floor(Math.random()*7)+2);
         soldCounter +=ranNum;
         const conuterStringArray = soldCounter.toString().split("");
-        let counterNumberText = "";
+        counterNumberText = "";
         for(let i=0;i<conuterStringArray.length;i++)
         {
-            // if(i==conuterStringArray.length-1)
+
             if(conuterStringArray[i]!=lastCounterNumberArray[i])
             {
                 counterNumberText += `<span class="counter-digit-box "><b class="digit-jump">${conuterStringArray[i]}</b></span>`;
@@ -50,11 +58,34 @@ let soldCounter = 203800;
             }
             
         }
+        counterNumberText += `<span>+<b class="plusone">1</b></span>`;
         lastCounterNumberArray = conuterStringArray;
         $('#counter-box').html(counterNumberText); 
+        
 
     },4000);
 
+    function addSoldCounter(sc){
+        const ranNum = (Math.floor(Math.random()*7)+2);
+        sc +=ranNum;
+        const conuterStringArray = sc.toString().split("");
+        let counterNumberText = "";
+        for(let i=0;i<conuterStringArray.length;i++)
+        {
+
+            if(conuterStringArray[i]!=lastCounterNumberArray[i])
+            {
+                counterNumberText += `<span class="counter-digit-box "><b class="digit-jump">${conuterStringArray[i]}</b></span>`;
+            }
+            else{
+                counterNumberText += `<span class="counter-digit-box"><b>${conuterStringArray[i]}</b></span>`;
+            }
+            
+        }
+        counterNumberText += `<span>+<b class="plusone">1</b></span>`;
+        lastCounterNumberArray = conuterStringArray;
+        $('#counter-box').html(counterNumberText); 
+    }
 
 // date
 

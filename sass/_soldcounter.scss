@@ -26,6 +26,7 @@
     @keyframes numJump {
         0%{
             opacity: 0;
+            
         }
         100%{
            opacity: 1;
@@ -65,13 +66,7 @@
         font-weight: normal;
     }
     .plusone{
-margin:0;
-@include grid(11,12,3,4);
-font-size: 100px;
-font-weight: normal;
-        span{
-            color:red;
-        }
+        color: red;
     }
     p{
        @include grid(1,17,4,5);

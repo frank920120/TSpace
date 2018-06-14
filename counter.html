@@ -26,8 +26,9 @@
     let soldCounter = 203800;
     let lastCounterNumberArray = ["2","0","3","8","0","0"]; 
     let date = new Date().toLocaleDateString().toString();
-    // date = date.replace(/\\/g,"");
-    console.log(date);
+    let dateC = Date.parse(new Date());
+    
+    console.log(parseInt((Math.floor((dateC/3600)/24/365))*13.8/3));
     setInterval(function(){
         const ranNum = (Math.floor(Math.random()*7)+2);
         soldCounter +=ranNum;
