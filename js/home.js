@@ -1,4 +1,6 @@
 $(document).ready(function() {
+
+// slideshow
     $('.home-slideshow').slick(
         {
             dots: true,
@@ -14,13 +16,8 @@ $(document).ready(function() {
       );
 // counter
 
-
-
 let soldCounter = 203800;
     let lastCounterNumberArray = ["2","0","3","8","0","0"]; 
-    let date = new Date().toLocaleDateString().toString();
-    // date = date.replace(/\\/g,"");
-    console.log(date);
     setInterval(function(){
         const ranNum = (Math.floor(Math.random()*7)+2);
         soldCounter +=ranNum;
