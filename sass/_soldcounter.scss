@@ -60,13 +60,13 @@
     }
     .counter-box{
         align-self:center;
-        @include grid(4,10,3,4);
+        @include grid(4,11,3,4);
         text-align: right;
         font-weight: normal;
     }
     .plusone{
 margin:0;
-@include grid(10,11,3,4);
+@include grid(11,12,3,4);
 font-size: 100px;
 font-weight: normal;
         span{

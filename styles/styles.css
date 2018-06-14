@@ -275,13 +275,13 @@ body {
     text-align: center; }
   .sold-counter-container .counter-box {
     align-self: center;
-    grid-column: 4 / 10;
+    grid-column: 4 / 11;
     grid-row: 3 / 4;
     text-align: right;
     font-weight: normal; }
   .sold-counter-container .plusone {
     margin: 0;
-    grid-column: 10 / 11;
+    grid-column: 11 / 12;
     grid-row: 3 / 4;
     font-size: 100px;
     font-weight: normal; }
