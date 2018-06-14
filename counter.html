@@ -28,7 +28,7 @@
     let date = new Date().toLocaleDateString().toString();
     let dateC = Date.parse(new Date());
     
-    console.log(parseInt((Math.floor((dateC/3600)/24/365))*13.8/3));
+    console.log(parseInt(((Math.floor((dateC/3600)/24/365))-48000)*1000));
     setInterval(function(){
         const ranNum = (Math.floor(Math.random()*7)+2);
         soldCounter +=ranNum;

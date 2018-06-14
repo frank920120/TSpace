@@ -67,6 +67,7 @@
     }
     .plusone{
         color: red;
+        
     }
     p{
        @include grid(1,17,4,5);
@@ -74,7 +75,7 @@
         align-self: center;
         span{
             color:red;
-                    
+            font-weight: bold;
         }
     }
     a{

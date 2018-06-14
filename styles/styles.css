@@ -26,7 +26,7 @@ body {
   height: 80px;
   top: 0;
   left: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), transparent); }
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)); }
   .main-nav .nav-left {
     display: flex;
     align-items: center;
@@ -287,7 +287,8 @@ body {
     text-align: center;
     align-self: center; }
     .sold-counter-container p span {
-      color: red; }
+      color: red;
+      font-weight: bold; }
   .sold-counter-container a {
     grid-column: 1 / 17;
     grid-row: 5 / 6;
@@ -382,7 +383,7 @@ footer {
     justify-content: space-between; }
     footer .copyright-logo h3 {
       color: white;
-      font-size: 6px; }
+      font-size: 12px; }
     footer .copyright-logo .logo {
       width: 200px;
       display: flex;

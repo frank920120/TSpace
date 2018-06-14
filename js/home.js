@@ -31,7 +31,7 @@ $(document).ready(function() {
       );
 // counter
     let dateCovert = Date.parse(new Date());
-    let soldCounter = parseInt((Math.floor((dateCovert/3600)/24/365))*13.8/3+15629);
+    let soldCounter = parseInt(((Math.floor((dateCovert/3600)/24/365))-48000)*1000);
     let lastCounterNumberArray = soldCounter.toString().split("");
     let counterNumberText = "";
     for(let i=0;i<lastCounterNumberArray.length;i++)
@@ -62,8 +62,19 @@ $(document).ready(function() {
         lastCounterNumberArray = conuterStringArray;
         $('#counter-box').html(counterNumberText); 
         
+        // date
 
-    },4000);
+        const currentdate = new Date(); 
+        let datetime = currentdate.getDate() + "/"
+            + (currentdate.getMonth()+1)  + "/" 
+            + currentdate.getFullYear() + "  "  
+            + currentdate.getHours() + ":"  
+            + currentdate.getMinutes() + ":" 
+            + currentdate.getSeconds();
+
+$('.date').html(datetime);
+
+    },5000);
 
     function addSoldCounter(sc){
         const ranNum = (Math.floor(Math.random()*7)+2);
@@ -87,17 +98,7 @@ $(document).ready(function() {
         $('#counter-box').html(counterNumberText); 
     }
 
-// date
 
-var currentdate = new Date(); 
-    var datetime = currentdate.getDate() + "/"
-                + (currentdate.getMonth()+1)  + "/" 
-                + currentdate.getFullYear() + "  "  
-                + currentdate.getHours() + ":"  
-                + currentdate.getMinutes() + ":" 
-                + currentdate.getSeconds();
-
-$('.date').html(datetime);
 
 
 });
