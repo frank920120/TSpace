@@ -46,9 +46,29 @@
 
     }
     @media only screen and (max-width:$phone-wide){
-       
+    .bannerwarp{
+       .textover{
+
+            .textover-content{
+                text-align: center;
+                h1{
+                    font-size: 30px;
+                    width: 100%;
+                    margin-bottom: 10px;
+                }
+                h3{
+
+                    font-size: 15px;
+                    margin-bottom: 40px;
+                }
+            }
+
+
+       }
 
 
 
     }
+}
+
 }

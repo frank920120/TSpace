@@ -1,11 +1,12 @@
 .sold-counter-container{
     display: grid;
-    grid-template-columns: (16,1fr);
-    grid-template-rows: 80px 80px 150px 80px 80px;
+    grid-template-columns: repeat(16,1fr);
+    grid-template-rows: auto;
     font-weight: normal;
     .counter-box{
         font-size: 5rem;
         font-weight: bold;
+
     }
 
     .counter-digit-box{
@@ -61,7 +62,7 @@
     }
     .counter-box{
         align-self:center;
-        @include grid(4,11,3,4);
+        @include grid(5,12,3,4);
         text-align: right;
         font-weight: normal;
     }
@@ -89,6 +90,35 @@
         height: 50px;
         padding: 10px;
         font-size: 20px;
+        margin-bottom: 30px;
+
+    }
+    @media only screen and (max-width:$phone-wide){
+
+.counter-header{
+    font-size:30px; 
+}
+.counter-title{
+
+    @include grid(1,8,2,3);
+
+}
+.date{
+
+    @include grid(11,16,2,3);
+
+}
+        .counter-box{
+            font-size: 1.5rem;
+            @include grid(4,12,3,4);
+        }
+
+        a{
+            font-size: 15px;
+            height: 40px;
+            
+
+        }
 
     }
 }

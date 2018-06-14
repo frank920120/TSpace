@@ -149,3 +149,19 @@ var Menu = {
 });
 
 
+// $('.img-div').mouseover(function(){
+
+//    $(this).find('.products-cover').slideDown();
+
+// });
+// $('.img-div').mouseout(function(){
+
+//     $(this).find('.products-cover').slideUp();
+ 
+//  });
+ $('.img-div').hover(function(){
+
+    $(this).find('.products-cover').slideDown();
+ },function(){
+    $(this).find('.products-cover').slideUp();
+ });
