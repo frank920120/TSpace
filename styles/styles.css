@@ -248,8 +248,10 @@ body {
     overflow: hidden;
     z-index: 1; }
     .explore-container .explore img {
-      height: 100%;
       width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
       transition: all 0.5s ease;
       -webkit-transform: translateZ(0);
       -moz-transform: translateZ(0);
@@ -448,7 +450,9 @@ body {
         margin: 0 auto;
         border: 4px solid white;
         width: 100%;
-        height: 100%; }
+        height: 100%;
+        object-fit: cover;
+        display: block; }
       .home-products .products .img-div .products-cover {
         position: absolute;
         top: 0;

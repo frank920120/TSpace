@@ -24,8 +24,7 @@
     overflow: hidden;
     z-index: 1;
     img{
-        height: 100%;
-        width: 100%;
+       @include imageSet;
         transition: all 0.5s ease; 
         -webkit-transform: translateZ(0);
     -moz-transform: translateZ(0);
