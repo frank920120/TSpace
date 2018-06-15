@@ -18,16 +18,21 @@
               margin:0 auto;
               
             h1{
-                text-decoration: underline;
+                display: block;
                 font-size: 80px;
                 letter-spacing: 10px;
                 margin:0;
-       
+                margin-right: -10px;
+                text-decoration: underline;
+            // &::after{
+            //     @include underline;
+            // }
             }
             h3{
                 margin-top:0;
             font-size: 25px;
             letter-spacing: 5px;
+            
 
             }
             a{

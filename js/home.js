@@ -159,12 +159,12 @@ $('.date').html(datetime);
 //     $(this).find('.products-cover').slideUp();
  
 //  });
- $('.img-div').hover(function(){
+//  $('.img-div').hover(function(){
 
-    $(this).find('.products-cover').slideDown();
- },function(){
-    $(this).find('.products-cover').slideUp();
- });
+//     $(this).find('.products-cover').slideDown('slow');
+//  },function(){
+//     $(this).find('.products-cover').slideUp('fast');
+//  });
 
 
 

@@ -33,6 +33,13 @@ background-color: black;
     position: relative;
     height: 300px;
     margin : 0 auto;
+    margin-bottom: 20px;
+    &:hover .products-cover{
+
+        display: block;
+
+    }
+
     img{
         display: block;
         margin:0 auto;
@@ -49,10 +56,12 @@ background-color: black;
         height: 100%;
         display:none;
 
-        a{
+       .products-button{
             position: absolute;
-            @include center(false,true);
             font-size: 10px;
+            transform: translate(-50%, -50%);
+            top: 60%;
+            left: 50%;
             background:black;
             padding: 10px;
             color: white;
@@ -60,6 +69,21 @@ background-color: black;
             border:2px solid white;
             z-index: 999;
 
+        }
+        .product-link{
+            position: absolute;;
+            transform: translate(-50%, -50%);
+            top: 30%;
+            left: 50%;
+            color:white;
+            font-weight: normal;
+            letter-spacing: 3px;
+            text-align: center;
+            font-size: 30px;
+            display: block;
+            margin-top:10px;
+            text-decoration: none;
+            margin-bottom: 30px;
         }
     }
    }
@@ -141,6 +165,15 @@ background-color: black;
 
     width: 250px;
     height: 250px;
+.products-cover{
+    display: block;
+    .products-button{
+            font-size: 5px;
+        padding: 5px;
+
+
+    }
+}
 }
 a{
 
