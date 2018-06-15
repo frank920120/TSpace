@@ -51,7 +51,20 @@ background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0));
         }
 
     }
+    @media only screen and (max-width:$tablet-landscape){
+        .nav-left{
 
+            margin-left: 50px;
+
+        }
+        .nav-right{
+            margin-right: 50px;
+
+
+        }
+
+
+    }
 
 
     @media only screen and (max-width:$phone-wide){
@@ -102,4 +115,7 @@ background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0));
             }
         }
     }
+
+
+
 }

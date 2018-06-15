@@ -43,6 +43,23 @@ grid-template-rows: 150px 1fr;
     @include grid(11,15,2,3);
 
    }
+   @media only screen and (max-width:$tablet-landscape){
+    
+
+    .service-content01{
+        @include grid(2,6,2,3);
+    
+    
+       }
+       .service-content02{
+        @include grid(7,11,2,3);
+    
+       }
+       .service-content03{
+        @include grid(12,16,2,3);
+    
+       }
+}
    @media only screen and (max-width:$phone-wide){
     grid-template-rows: 200px repeat(3,1fr);
     .service-title{
