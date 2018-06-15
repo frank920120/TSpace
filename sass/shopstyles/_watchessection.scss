@@ -33,6 +33,9 @@
             @include gridSpan(1,12);
             .banner-text{
                 position: relative;
+                h2{
+                    font-size: 30px;
+                }
                 h2,p{
                     margin: 0;
                     padding: 10px 15px;
@@ -74,10 +77,12 @@ padding: 20px;
             margin: 0;
             padding: 5px 10px 0;
         }
-        img{
-            display: block;
+        
+        @media screen and (max-width:$phone-wide) {
+            position: static;
+            height: 110px;
         }
-    
+
 
          }
          img{
@@ -128,11 +133,7 @@ padding: 20px;
     }
 }
 
-@media screen and (max-width:$phone-wide) {
-    .item-box{
-        grid-column: span 12;
-    }
-}
+
 
 
 
