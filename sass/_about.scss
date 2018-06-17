@@ -1,0 +1,102 @@
+.about-nav{
+position: static;
+background-color: black;
+
+}
+
+.about-contact{
+    margin-top:100px;
+    @media only screen and (max-width:$phone-wide){
+
+        margin-top: 30px;
+
+    }
+    .about-section{
+        margin:0 auto;
+        width:70%;
+        .about-header{
+            font-size: 40px;
+            text-decoration: underline;
+            letter-spacing:1px;
+            text-align: center;
+            font-weight: 400;
+            
+        }
+        .about-title{
+            font-size: 30px;
+            text-decoration: underline;
+            font-weight: 400;
+            text-align: center;
+            margin-top:30px;
+        }
+        img{
+            max-width:100%;
+            @include imageSet;
+            margin-top:30px;
+            margin-bottom: 30px;
+        }
+        article{
+            p{
+                font-family: 'Oswald', 'Roboto', sans-serif ;
+                font-size: 20px;
+                font-weight: 200;
+                line-height: 30px;
+                text-align: left;
+
+            }
+
+
+
+        }
+        @media only screen and (max-width:$tablet-landscape){
+
+                    .about-header{
+
+                        font-size: 35px;
+
+
+                    }
+                    .about-title{
+
+                        font-size: 25px;
+
+
+                    }
+
+
+
+            }
+            @media only screen and (max-width:$phone-wide){
+               
+                .about-header{
+
+                    font-size: 30px;
+
+
+                }
+                .about-title{
+
+                    font-size: 20px;
+
+
+                }
+                article{
+                p{
+
+                    font-size: 15px;
+
+
+                }
+            }
+            }
+
+        
+
+    }
+
+
+
+
+
+
+}
