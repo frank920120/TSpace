@@ -1,0 +1,277 @@
+.contact-container{
+
+    background-color: black;
+
+    .title{
+        color: white;
+        text-align: center;
+        padding: 90px 0 40px;
+        h1{
+            margin: 0;
+            font-size: 40px;
+            text-decoration: underline;
+            letter-spacing:1px;
+            text-align: center;
+            font-weight: 400;
+            
+        }
+    }
+
+    .map{
+        width: 100vw;
+        height: 60vh;
+     
+    }
+
+    h3,p{
+        
+        color: white;
+        display: block;
+
+        i{
+            margin: 5px;
+        }
+
+    }
+
+    .contact-info{
+     
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+        text-align: center;
+        .address-box{
+            grid-column: 1 / span 6;
+        }
+        .phone-box{
+            grid-column: 7 / span 12;
+        }
+        .email-box{
+            grid-column: span 12;
+        }
+
+    }
+
+
+    .mail-form{
+
+        .textarea-container{
+          
+            padding: 5px 0 15px;
+            display: block;
+            width: 40vw;
+            margin: 15px auto;
+      
+        }
+
+        .email-content{
+            width: 40vw;
+            height: 20vh;
+            display: none;
+        }
+
+        .textarea-title{
+            display: block;
+            width: 40vw;
+            font-weight: bold;
+            font-size: 70.25%;
+            line-height: 22px;
+            border-top: 4px solid white;
+            border-bottom: 4px solid white;
+            padding: 10px 0;
+            cursor: pointer;
+
+        }
+
+        @media only screen and (max-width:$phone-wide){
+            
+        .textarea-container{
+ 
+            width: 350px;
+              
+        }
+
+        .email-content{
+            width:  350px;
+
+        }
+
+        .textarea-title{
+            text-align: left;
+            width:  350px;
+
+        }
+
+        }
+
+        .send-btn{
+            display: block;
+            font-size: 18px;
+            background:black;
+            padding: 10px;
+            color: white;
+            text-decoration: none;
+            margin: 0 auto;
+            width: 150px;
+            text-align: center;
+            margin-bottom: 2em;
+            border: 2px solid white;
+    
+        }
+
+        .input {
+            position: relative;
+            z-index: 1;
+            display: inline-block;
+            margin: 1em;
+            max-width: 350px;
+            width: calc(100% - 2em);
+            vertical-align: top;
+        }
+        
+        .input__field {
+            position: relative;
+            display: block;
+            float: right;
+            padding: 0.8em;
+            width: 60%;
+            border: none;
+            border-radius: 0;
+            background: #f0f0f0;
+            color: #ffffff;;
+            font-weight: bold;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            -webkit-appearance: none; /* for box shadows to show on iOS */
+        }
+        
+        .input__field:focus {
+            outline: none;
+        }
+        
+        .input__label {
+            display: inline-block;
+            float: right;
+            padding: 0 1em;
+            width: 40%;
+            color: #ffffff;;
+            font-weight: bold;
+            font-size: 70.25%;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        .input__label-content {
+            position: relative;
+            display: block;
+            padding: 1.6em 0;
+            width: 100%;
+        }
+        
+        .graphic {
+            position: absolute;
+            top: 0;
+            left: 0;
+            fill: none;
+        }
+        
+        .icon {
+            color: #ddd;
+            font-size: 150%;
+        }
+        
+        /* Individual styles */
+        
+        /* Haruki */
+        
+        .input--haruki {
+            margin: 4em 1em 1em;
+        }
+        
+        .input__field--haruki {
+            padding: 0.4em 0.25em;
+            width: 100%;
+            background: transparent;
+            color: #AFB5BB;
+            font-size: 1.55em;
+        }
+        
+        .input__label--haruki {
+            position: absolute;
+            width: 100%;
+            text-align: left;
+            pointer-events: none;
+        }
+        
+        .input__label-content--haruki {
+            -webkit-transition: -webkit-transform 0.3s;
+            transition: transform 0.3s;
+        }
+        
+        .input__label--haruki::before,
+        .input__label--haruki::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            z-index: -1;
+            width: 100%;
+            height: 4px;
+            background: #ffffff;
+            -webkit-transition: -webkit-transform 0.3s;
+            transition: transform 0.3s;
+        }
+        
+        .input__label--haruki::before {
+            top: 0;
+        }
+        
+        .input__label--haruki::after {
+            bottom: 0;
+        }
+        
+        .input__field--haruki:focus + .input__label--haruki .input__label-content--haruki,
+        .input--filled .input__label-content--haruki {
+            -webkit-transform: translate3d(0, -90%, 0);
+            transform: translate3d(0, -90%, 0);
+        }
+        
+        .input__field--haruki:focus + .input__label--haruki::before,
+        .input--filled .input__label--haruki::before {
+            -webkit-transform: translate3d(0, -0.5em, 0);
+            transform: translate3d(0, -0.5em, 0);
+        }
+        
+        .input__field--haruki:focus + .input__label--haruki::after,
+        .input--filled .input__label--haruki::after {
+            -webkit-transform: translate3d(0, 0.5em, 0);
+            transform: translate3d(0, 0.5em, 0);
+        }
+    }
+
+
+
+
+
+
+   
+
+
+       
+
+        @media only screen and (max-width:$phone-wide){
+            
+            .title{ 
+                padding: 20px;
+            
+             }
+            }
+
+
+
+
+
+}
