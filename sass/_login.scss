@@ -1,0 +1,180 @@
+.login-page{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top:0;
+    left: 0;
+    display: none;
+
+    .login-cover{
+        position: relative;
+        background-color: rgba(0,0,0,0.6);
+        width: 100%;
+        height: 100%;
+        .close-login{
+            position: absolute;
+            top:0;
+            right: 0;
+            background-color: black;
+            width: 50px;
+            height: 40px;
+            color:white;
+            text-align: center; 
+            font-size:30px;
+            text-decoration: none;
+        }
+
+        .login-form{
+            position: absolute;
+            background-color: white;
+            width: 50%;
+            height: 400px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            form{
+               display: flex;
+               flex-direction: column;
+                justify-content: center;
+            h1{
+                text-align: center;
+                text-decoration: underline;
+                text-underline-position: under;
+                font-size: 30px;
+            }
+            .forgotpw{
+                width: 50%;
+             margin:0 auto; 
+                margin-bottom: 10px;
+                a{
+                    color:grey;
+                    margin-left: 5px;
+                    
+                    &:hover{
+
+                        color:black;
+
+                    }
+
+
+                }
+            }
+            label{
+                margin:0 auto;
+                font-size: 20px;
+                width: 50%;
+                margin-bottom:10px;
+
+            }
+            input{
+                width: 50%;
+                margin:0 auto;
+                padding: 10px;
+                margin-bottom:10px;
+                border:2px black solid;
+
+            }
+            .submit{
+                background-color: black;
+                color:white;
+                cursor: pointer;
+            }
+            .checkbox{
+                width: 50%;
+                margin:0 auto;
+                input{
+                width: 20px;
+
+
+                }
+                label{
+                    font-size: 10px;
+
+
+                }
+
+            }
+
+        }
+
+        .signup{
+            display: flex;
+            justify-content: center;
+            h3{
+                margin:0;
+                font-size:15px;
+
+            }
+            a{
+                color:grey;
+                &:hover{
+                    color:black;
+
+
+                }
+
+            }
+
+
+        }
+
+        @media screen and (max-width:$tablet-landscape){
+            width: 70%;
+           
+        }
+
+        @media screen and (max-width:$phone-wide){
+            width: 80%;
+            height: 350px;
+
+            form{
+                h1{
+
+                    font-size: 20px;
+
+                }
+               label{
+                font-size: 15px;
+                width: 70%;;
+               }
+               .forgotpw{
+                   width: 70%;
+                    a{
+                        font-size: 15px;
+
+                    }
+
+
+               }
+               input{
+                width: 70%;
+
+
+               }
+               .checkbox{
+                width: 70%;
+
+               }
+
+            }
+        }
+        }
+
+        @media screen and (max-width:$phone-wide){
+
+            .close-login{
+
+                width: 30px;
+                height: 30px;
+                font-size: 20px;
+            }
+
+
+
+        }
+
+    }
+  
+
+
+}
