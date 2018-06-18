@@ -1,12 +1,12 @@
 $( document ).ready(function() {
     $('.login').click(function(){
 
-        $('.login-page').css('display','block');
+        $('.login-page').fadeIn();
     });
 
     $('.close-login').click(function(){
 
-        $('.login-page').css('display','none');
+        $('.login-page').fadeOut();
     });
 
 });
