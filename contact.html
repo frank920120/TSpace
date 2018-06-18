@@ -41,12 +41,12 @@
             <div class="contact-info">
                 <div class="address-box">
                     <h3><i class="fas fa-address-book"></i>ADDRESS</h3>
-                    <p>3700 Willingdon Avenue</p>
+                    <p>555 Seymour Street</p>
                     <p>
-                    Burnaby, British Columbia
+                    Vancouver, British Columbia
                     </p>
                     <p>
-                    Canada, V5G 3H2
+                    V6B 3H6 , Canada
                     </p>
                 </div>
                 <div class="phone-box">
@@ -81,17 +81,44 @@
                                             </label>
                                         </span>
                                     
-                                        <div class="textarea-container">
+                                        <span class="textarea-container">
                                                 <p class="textarea-title">Subject</p>
-                                                <textarea name="email-content" class="email-content">
+                                                <textarea name="email-content" class="email-content" id="email-content">
             
                                                 </textarea>
-                                        </div>
+                                        </span>
+
+                                        <span class="radio-group">
+                                                <h4>Do you mind telling us about your gender?</h4>
+                                                <input type="radio" name="gender" id="gender-male" value="male" />
+                                                <labelfor="gender-male"><i class="fas fa-mars"></i>Male</label>
+                                                <input type="radio" name="gender" id="gender-female" value="female" />
+                                                <labelfor="gender-female"><i class="fas fa-venus"></i>Female</label>
+                                                <input type="radio" name="gender" id="gender-unknown" value="unknown" checked="checked" />
+                                                <labelfor="gender-unknown"><i class="fas fa-lock"></i>Secret</label>
+                                        </span>
+                                        <span class="select-group">
+                                                <h4>Do you mind telling us about your age?</h4>
+                                                <select class="select-age" id="age" name="age" >
+                                                <option value="Prefer Not to Answer"selected>Prefer Not to Answer</option>
+                                                <option value="Under 18">Under 18</option>
+                                                <option value="18-24">18-24</option>
+                                                <option value="25-34">25-34</option>
+                                                <option value="35-44">35-44</option>
+                                                <option value="45 or Above">45 or Above</option>
+                                                </select>
+                                        </span>
+                                        <span class="checkbox-container">
+                                                <h4>Subscribe to T-Space weekly promotion news</h4>
+                                                <input type="checkbox"id="topping-01"name="topping[]"value="pepperoni"checked>
+                                                <label for="topping-01">Subscribe</label>
+                                        </span>
+                                   
                                    
                          
-                            <div>
-                                <a class="send-btn" href="#0">SEND</a>
-                            </div>
+                            <span>
+                                <button type="submit" class="send-btn" >SEND</button>
+                            </span>
                     </form>
                 </div>
             </div>

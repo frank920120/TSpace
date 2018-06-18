@@ -82,6 +82,21 @@
 
         }
 
+        .radio-group,.checkbox-container,.select-group{
+            color: white;
+            display: block;
+            margin: 20px auto;
+
+            .select-age{
+                border: 2px solid white;
+                padding: 10px;
+                background-color: black;
+                color: white;
+            }
+
+        }
+
+
         @media only screen and (max-width:$phone-wide){
             
         .textarea-container{
