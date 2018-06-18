@@ -53,7 +53,39 @@ $( document ).ready(function() {
             alt:"Max Metal Temple"
         }
     ]
+    $('#search-input-glasses').keypress(function(e){
+        if(e.which == 13){//Enter key pressed
+            $('.glasses-search-btn').click();//Trigger search button click event
+        }
+    });
+$('.glasses-search-btn').click(function(){
+    $('.glasses-show').html('');
+let GlassesSearchVal=$('#search-input-glasses').val().toLowerCase();
 
+for(let i = 0 ; i<glassesArray.length;i++){
+    if(glassesArray[i].name.toLowerCase().indexOf(GlassesSearchVal)!=-1){
+    let itemDiv=$(`<div class="item-box" id="glass0${i+1}"></div>`)
+    let glasstext=$(`<div class="glass-text"></div>`);
+    let glassheader = $(`<h3 class="glass-name">${glassesArray[i].name}</h3>`).appendTo(glasstext);
+    let glasscolor = $(`<p class="glass-color">${glassesArray[i].color}</p>`).appendTo(glasstext);
+    let image =$(`<img src="${glassesArray[i].img}" alt="${glassesArray[i].alt}">`);
+    let itembutton =$(`<div class="item-button-group"></div>`);
+    let infobtn = $(`<span class="item-info-btn" title="More information"></span>`);
+    let far = $(`<i class="far fa-file-alt"></i>`).appendTo(infobtn);
+    let addcartbtn=$(`<span class="item-addcart-btn" title="Add to cart"></span>`);
+    let fas = $(`<i class="fas fa-cart-plus"></i>`).appendTo(addcartbtn);
+    let cover =$(`<div class="cover"></div>`);
+    infobtn.appendTo(itembutton);
+    addcartbtn.appendTo(itembutton);
+    glasstext.appendTo(itemDiv);
+    image.appendTo(itemDiv);
+    itembutton.appendTo(itemDiv);
+    cover.appendTo(itemDiv);
+    itemDiv.appendTo($('.glasses-show'));
+}
+}
+
+});
     for(let i = 0 ; i<glassesArray.length;i++){
         let itemDiv=$(`<div class="item-box" id="glass0${i+1}"></div>`)
         let glasstext=$(`<div class="glass-text"></div>`);
@@ -126,6 +158,39 @@ let watchesArray=[
         alt:"TAG HEUER"
     }
 ]
+$('#search-input-watches').keypress(function(e){
+    if(e.which == 13){//Enter key pressed
+        $('.watches-search-btn').click();//Trigger search button click event
+    }
+});
+$('.watches-search-btn').click(function(){
+    $('.watch-show').html('');
+let watchesSearchVal=$('#search-input-watches').val().toLowerCase();
+for(let i = 0 ; i<watchesArray.length;i++){
+if(watchesArray[i].name.toLowerCase().indexOf(watchesSearchVal)!=-1){
+    let itemDiv=$(`<div class="item-box" id="watch0${i+1}"></div>`)
+    let watchtext=$(`<div class="watch-text"></div>`);
+    let watchheader = $(`<h3 class="watch-name">${watchesArray[i].name}</h3>`).appendTo(watchtext);
+    let watchcolor = $(`<p class="watch-color">${watchesArray[i].color}</p>`).appendTo(watchtext);
+    let image =$(`<img src="${watchesArray[i].img}" alt="${watchesArray[i].alt}">`);
+    let itembutton =$(`<div class="item-button-group"></div>`);
+    let infobtn = $(`<span class="item-info-btn" title="More information"></span>`);
+    let far = $(`<i class="far fa-file-alt"></i>`).appendTo(infobtn);
+    let addcartbtn=$(`<span class="item-addcart-btn" title="Add to cart"></span>`);
+    let fas = $(`<i class="fas fa-cart-plus"></i>`).appendTo(addcartbtn);
+    let cover =$(`<div class="cover"></div>`);
+    infobtn.appendTo(itembutton);
+    addcartbtn.appendTo(itembutton);
+    watchtext.appendTo(itemDiv);
+    image.appendTo(itemDiv);
+    itembutton.appendTo(itemDiv);
+    cover.appendTo(itemDiv);
+    itemDiv.appendTo($('.watch-show'));
+}
+
+}
+
+});
 
 for(let i = 0 ; i<watchesArray.length;i++){
     let itemDiv=$(`<div class="item-box" id="watch0${i+1}"></div>`)
@@ -200,6 +265,37 @@ let headphoneArray=[
         alt:"Powerbeats3 Wireless"
     }
 ]
+$('#search-input-headphone').keypress(function(e){
+    if(e.which == 13){//Enter key pressed
+        $('.headphone-search-btn').click();//Trigger search button click event
+    }
+});
+$('.headphone-search-btn').click(function(){
+    $('.headphone-show').html('');
+let headphoneSearchVal=$('#search-input-headphone').val().toLowerCase();
+for(let i = 0 ; i<headphoneArray.length;i++){
+if(headphoneArray[i].name.toLowerCase().indexOf(headphoneSearchVal)!=-1){
+    let itemDiv=$(`<div class="item-box" id="headphone0${i+1}"></div>`)
+    let headphonetext=$(`<div class="headphone-text"></div>`);
+    let headphoneheader = $(`<h3 class="headphone-name">${headphoneArray[i].name}</h3>`).appendTo(headphonetext);
+    let headphonecolor = $(`<p class="headphone-color">${headphoneArray[i].color}</p>`).appendTo(headphonetext);
+    let image =$(`<img src="${headphoneArray[i].img}" alt="${headphoneArray[i].alt}">`);
+    let itembutton =$(`<div class="item-button-group"></div>`);
+    let infobtn = $(`<span class="item-info-btn" title="More information"></span>`);
+    let far = $(`<i class="far fa-file-alt"></i>`).appendTo(infobtn);
+    let addcartbtn=$(`<span class="item-addcart-btn" title="Add to cart"></span>`);
+    let fas = $(`<i class="fas fa-cart-plus"></i>`).appendTo(addcartbtn);
+    let cover =$(`<div class="cover"></div>`);
+    infobtn.appendTo(itembutton);
+    addcartbtn.appendTo(itembutton);
+    headphonetext.appendTo(itemDiv);
+    image.appendTo(itemDiv);
+    itembutton.appendTo(itemDiv);
+    cover.appendTo(itemDiv);
+    itemDiv.appendTo($('.headphone-show'));
+}
+}
+});
 
 for(let i = 0 ; i<headphoneArray.length;i++){
     let itemDiv=$(`<div class="item-box" id="headphone0${i+1}"></div>`)
