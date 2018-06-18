@@ -5,6 +5,7 @@
     <link rel="stylesheet" type="text/css" href="js/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="js/slick/slick-theme.css"/>
     <link rel="stylesheet" href="styles/contactstyles.css">
+    <link rel="stylesheet" href="styles/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Oswald:300" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,7 +23,7 @@
            <li><a href="index.html">Home</a></li>
            <li><a href="shop.html">Shop</a></li>
            <li><a href="about.html">About</a></li>
-           <li><a href="#">Contact</a></li>
+           <li><a href="contact.html">Contact</a></li>
            <li class="login"><a href="#0">Login In</a></li>
         </ul>
     </nav>
@@ -137,8 +138,8 @@
                     <li><a href="index.html">HOME</a></li>
                     <li><a href="shop.html">SHOP</a></li>
                     <li><a href="about.html">ABOUT</a></li>
-                    <li><a href="#0">CONTACT</a></li>
-                    <li><a href="#0">LOG IN</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li class="login"><a href="#0">LOG IN</a></li>
                 </ul>
             </div>
             <div class="copyright-logo">
@@ -151,9 +152,38 @@
                </div>
             </div>
         </footer>
+        <div class="login-page">
+            <div class="login-cover">
+        
+                <div class="login-form">
+                    <form action="">
+                        <h1>Log in with your account</h1>
+                        <label for="user-name">Username</label>
+                        <input type="text"  id="username" name="username" placeholder="Enter your username">
+                        <div class="forgotpw">
+                        <label for="password">Password</label><a href="#0">Forgot?</a>
+                         </div>
+                        <input type="text"  id="username" name="username" placeholder="Enter your password">
+                            <div class="checkbox">
+                                <div class="rememberpw">
+                                    <input type="checkbox" name="rememberpw" value="rememberpw" id="rememberpw"><label for="rememberpw">Remember Password</label>  
+                                </div>
+                                
+                            </div>
+                        <input type="submit" class="submit" value="Log in">
+                    </form>
+                    <div class="signup">
+                    <h3>Don't have an account?</h3>
+                    <a href="#0">Create</a>
+                    </div>
+                    <a class="close-login" href="#0">X</a>
+                </div>
+            </div>
+        </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script type="text/javascript" src="js/slick/slick.min.js"></script>
         <script type="text/javascript" src="js/base.js" ></script>
+        <script type="text/javascript" src="js/login.js" ></script>
         <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
         <script src="js/classes.js"></script>
         <script type="text/javascript" src="js/contact.js" ></script>
