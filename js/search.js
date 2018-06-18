@@ -61,9 +61,12 @@ $( document ).ready(function() {
 $('.glasses-search-btn').click(function(){
     $('.glasses-show').html('');
 let GlassesSearchVal=$('#search-input-glasses').val().toLowerCase();
-
+let counter=0;
 for(let i = 0 ; i<glassesArray.length;i++){
-    if(glassesArray[i].name.toLowerCase().indexOf(GlassesSearchVal)!=-1){
+   if(glassesArray[i].name.toLowerCase().indexOf(GlassesSearchVal)==-1){
+        counter++;
+    }
+   if(glassesArray[i].name.toLowerCase().indexOf(GlassesSearchVal)!=-1){
     let itemDiv=$(`<div class="item-box" id="glass0${i+1}"></div>`)
     let glasstext=$(`<div class="glass-text"></div>`);
     let glassheader = $(`<h3 class="glass-name">${glassesArray[i].name}</h3>`).appendTo(glasstext);
@@ -83,6 +86,22 @@ for(let i = 0 ; i<glassesArray.length;i++){
     cover.appendTo(itemDiv);
     itemDiv.appendTo($('.glasses-show'));
 }
+        if(counter==glassesArray.length){
+
+            let warning = $(`<div class="warning"><h1 class="warninginfo">0 results for ${GlassesSearchVal} </h1></div>`);
+            let searchtip=$(`<div class="searchtip"></div>`);
+            let tipslist=$(`
+            <h3>Search Tips</h3>
+            <ul>
+                        <li>Make sure words are spelled correctly</li>
+                        <li>Try using different keywords</li>
+                        <li>Remove filters to broaden your search</li>
+            </ul>`);
+            
+            warning.appendTo($('.glasses-show'));
+            tipslist.appendTo(searchtip);
+            searchtip.appendTo($('.glasses-show'));
+        }
 }
 $('.item-box').hover(function(){
     $(this).find('.cover').slideDown('slow');
@@ -173,7 +192,11 @@ $('#search-input-watches').keypress(function(e){
 $('.watches-search-btn').click(function(){
     $('.watch-show').html('');
 let watchesSearchVal=$('#search-input-watches').val().toLowerCase();
+let counter=0;
 for(let i = 0 ; i<watchesArray.length;i++){
+    if(watchesArray[i].name.toLowerCase().indexOf(watchesSearchVal)==-1){
+        counter++;
+    }
 if(watchesArray[i].name.toLowerCase().indexOf(watchesSearchVal)!=-1){
     let itemDiv=$(`<div class="item-box" id="watch0${i+1}"></div>`)
     let watchtext=$(`<div class="watch-text"></div>`);
@@ -194,7 +217,22 @@ if(watchesArray[i].name.toLowerCase().indexOf(watchesSearchVal)!=-1){
     cover.appendTo(itemDiv);
     itemDiv.appendTo($('.watch-show'));
 }
+if(counter==watchesArray.length){
 
+    let warning = $(`<div class="warning"><h1 class="warninginfo">0 results for ${watchesSearchVal} </h1></div>`);
+    let searchtip=$(`<div class="searchtip"></div>`);
+    let tipslist=$(`
+    <h3>Search Tips</h3>
+    <ul>
+                <li>Make sure words are spelled correctly</li>
+                <li>Try using different keywords</li>
+                <li>Remove filters to broaden your search</li>
+    </ul>`);
+    
+    warning.appendTo($('.watch-show'));
+    tipslist.appendTo(searchtip);
+    searchtip.appendTo($('.watch-show'));
+}
 }
 $('.item-box').hover(function(){
     $(this).find('.cover').slideDown('slow');
@@ -287,8 +325,13 @@ $('#search-input-headphone').keypress(function(e){
 $('.headphone-search-btn').click(function(){
     $('.headphone-show').html('');
 let headphoneSearchVal=$('#search-input-headphone').val().toLowerCase();
+let counter=0;
 for(let i = 0 ; i<headphoneArray.length;i++){
+    if(headphoneArray[i].name.toLowerCase().indexOf(headphoneSearchVal)==-1){
+        counter++;
+    }
 if(headphoneArray[i].name.toLowerCase().indexOf(headphoneSearchVal)!=-1){
+  
     let itemDiv=$(`<div class="item-box" id="headphone0${i+1}"></div>`)
     let headphonetext=$(`<div class="headphone-text"></div>`);
     let headphoneheader = $(`<h3 class="headphone-name">${headphoneArray[i].name}</h3>`).appendTo(headphonetext);
@@ -307,6 +350,22 @@ if(headphoneArray[i].name.toLowerCase().indexOf(headphoneSearchVal)!=-1){
     itembutton.appendTo(itemDiv);
     cover.appendTo(itemDiv);
     itemDiv.appendTo($('.headphone-show'));
+}
+if(counter==headphoneArray.length){
+
+    let warning = $(`<div class="warning"><h1 class="warninginfo">0 results for ${headphoneSearchVal} </h1></div>`);
+    let searchtip=$(`<div class="searchtip"></div>`);
+    let tipslist=$(`
+    <h3>Search Tips</h3>
+    <ul>
+                <li>Make sure words are spelled correctly</li>
+                <li>Try using different keywords</li>
+                <li>Remove filters to broaden your search</li>
+    </ul>`);
+    
+    warning.appendTo($('.headphone-show'));
+    tipslist.appendTo(searchtip);
+    searchtip.appendTo($('.headphone-show'));
 }
 }
 $('.item-box').hover(function(){
