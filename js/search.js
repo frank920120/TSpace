@@ -84,7 +84,14 @@ for(let i = 0 ; i<glassesArray.length;i++){
     itemDiv.appendTo($('.glasses-show'));
 }
 }
+$('.item-box').hover(function(){
+    $(this).find('.cover').slideDown('slow');
+    $(this).find('.item-button-group').fadeIn('slow');
 
+},function(){
+    $(this).find('.cover').fadeOut('fast');
+    $(this).find('.item-button-group').fadeOut('fast');
+});
 });
     for(let i = 0 ; i<glassesArray.length;i++){
         let itemDiv=$(`<div class="item-box" id="glass0${i+1}"></div>`)
@@ -189,7 +196,14 @@ if(watchesArray[i].name.toLowerCase().indexOf(watchesSearchVal)!=-1){
 }
 
 }
+$('.item-box').hover(function(){
+    $(this).find('.cover').slideDown('slow');
+    $(this).find('.item-button-group').fadeIn('slow');
 
+},function(){
+    $(this).find('.cover').fadeOut('fast');
+    $(this).find('.item-button-group').fadeOut('fast');
+});
 });
 
 for(let i = 0 ; i<watchesArray.length;i++){
@@ -295,6 +309,14 @@ if(headphoneArray[i].name.toLowerCase().indexOf(headphoneSearchVal)!=-1){
     itemDiv.appendTo($('.headphone-show'));
 }
 }
+$('.item-box').hover(function(){
+    $(this).find('.cover').slideDown('slow');
+    $(this).find('.item-button-group').fadeIn('slow');
+
+},function(){
+    $(this).find('.cover').fadeOut('fast');
+    $(this).find('.item-button-group').fadeOut('fast');
+});
 });
 
 for(let i = 0 ; i<headphoneArray.length;i++){
