@@ -148,7 +148,79 @@ for(let i = 0 ; i<watchesArray.length;i++){
     itemDiv.appendTo($('.watch-show'));
 }
 
+// headphone items
 
+let headphoneArray=[
+    {
+        name:"Beats Studio3 Wireless",
+        color:"Rose Gold",
+        img:"images/shopimg/headphones/rosegold_V2.jpg",
+        alt:"Beats Studio3 Wireless"
+    },
+    {
+        name:"Beats Studio3 Wireless",
+        color:"Sliver",
+        img:"images/shopimg/headphones/silver_V2.jpg",
+        alt:"Beats Studio3 Wireless"
+    },
+    {
+        name:"Beats Studio3 Wireless",
+        color:"White",
+        img:"images/shopimg/headphones/white_V2.jpg",
+        alt:"Beats Studio3 Wireless"
+    },
+    {
+        name:"Beats Studio3 Wireless",
+        color:"Jet Black",
+        img:"images/shopimg/headphones/jetblack_V2.jpg",
+        alt:"Beats Studio3 Wireless"
+    },
+    {
+        name:"Beats Studio3 Wireless",
+        color:"Gold",
+        img:"images/shopimg/headphones/gold_V2.jpg",
+        alt:"Beats Studio3 Wireless"
+    },
+    {
+        name:"Beats EP",
+        color:"Blue",
+        img:"images/shopimg/headphones/ML9D2-large-thrqtrrght.jpg",
+        alt:"Beats EP"
+    },
+    {
+        name:"Beats EP",
+        color:"Red",
+        img:"images/shopimg/headphones/ML9D2-large-thrqtrrghtRed.jpg",
+        alt:"Beats EP"
+    },
+    {
+        name:"Powerbeats3 Wireless",
+        color:"Black",
+        img:"images/shopimg/headphones/black-2_2016-11-04_A_V2.jpg",
+        alt:"Powerbeats3 Wireless"
+    }
+]
+
+for(let i = 0 ; i<headphoneArray.length;i++){
+    let itemDiv=$(`<div class="item-box" id="headphone0${i+1}"></div>`)
+    let headphonetext=$(`<div class="headphone-text"></div>`);
+    let headphoneheader = $(`<h3 class="headphone-name">${headphoneArray[i].name}</h3>`).appendTo(headphonetext);
+    let headphonecolor = $(`<p class="headphone-color">${headphoneArray[i].color}</p>`).appendTo(headphonetext);
+    let image =$(`<img src="${headphoneArray[i].img}" alt="${headphoneArray[i].alt}">`);
+    let itembutton =$(`<div class="item-button-group"></div>`);
+    let infobtn = $(`<span class="item-info-btn" title="More information"></span>`);
+    let far = $(`<i class="far fa-file-alt"></i>`).appendTo(infobtn);
+    let addcartbtn=$(`<span class="item-addcart-btn" title="Add to cart"></span>`);
+    let fas = $(`<i class="fas fa-cart-plus"></i>`).appendTo(addcartbtn);
+    let cover =$(`<div class="cover"></div>`);
+    infobtn.appendTo(itembutton);
+    addcartbtn.appendTo(itembutton);
+    headphonetext.appendTo(itemDiv);
+    image.appendTo(itemDiv);
+    itembutton.appendTo(itemDiv);
+    cover.appendTo(itemDiv);
+    itemDiv.appendTo($('.headphone-show'));
+}
 
 
 
