@@ -63,10 +63,10 @@ $('.glasses-search-btn').click(function(){
 let GlassesSearchVal=$('#search-input-glasses').val().toLowerCase();
 let counter=0;
 for(let i = 0 ; i<glassesArray.length;i++){
-   if(glassesArray[i].name.toLowerCase().indexOf(GlassesSearchVal)==-1){
+   if(glassesArray[i].name.toLowerCase().indexOf(GlassesSearchVal)==-1&&glassesArray[i].color.toLowerCase().indexOf(GlassesSearchVal)==-1){
         counter++;
     }
-   if(glassesArray[i].name.toLowerCase().indexOf(GlassesSearchVal)!=-1){
+   if(glassesArray[i].name.toLowerCase().indexOf(GlassesSearchVal)!=-1||glassesArray[i].color.toLowerCase().indexOf(GlassesSearchVal)!=-1){
     let itemDiv=$(`<div class="item-box" id="glass0${i+1}"></div>`)
     let glasstext=$(`<div class="glass-text"></div>`);
     let glassheader = $(`<h3 class="glass-name">${glassesArray[i].name}</h3>`).appendTo(glasstext);
@@ -194,10 +194,10 @@ $('.watches-search-btn').click(function(){
 let watchesSearchVal=$('#search-input-watches').val().toLowerCase();
 let counter=0;
 for(let i = 0 ; i<watchesArray.length;i++){
-    if(watchesArray[i].name.toLowerCase().indexOf(watchesSearchVal)==-1){
+    if(watchesArray[i].name.toLowerCase().indexOf(watchesSearchVal)==-1&&watchesArray[i].color.toLowerCase().indexOf(watchesSearchVal)==-1){
         counter++;
     }
-if(watchesArray[i].name.toLowerCase().indexOf(watchesSearchVal)!=-1){
+if(watchesArray[i].name.toLowerCase().indexOf(watchesSearchVal)!=-1||watchesArray[i].color.toLowerCase().indexOf(watchesSearchVal)!=-1){
     let itemDiv=$(`<div class="item-box" id="watch0${i+1}"></div>`)
     let watchtext=$(`<div class="watch-text"></div>`);
     let watchheader = $(`<h3 class="watch-name">${watchesArray[i].name}</h3>`).appendTo(watchtext);
@@ -327,10 +327,10 @@ $('.headphone-search-btn').click(function(){
 let headphoneSearchVal=$('#search-input-headphone').val().toLowerCase();
 let counter=0;
 for(let i = 0 ; i<headphoneArray.length;i++){
-    if(headphoneArray[i].name.toLowerCase().indexOf(headphoneSearchVal)==-1){
+    if(headphoneArray[i].name.toLowerCase().indexOf(headphoneSearchVal)==-1&&headphoneArray[i].color.toLowerCase().indexOf(headphoneSearchVal)==-1){
         counter++;
     }
-if(headphoneArray[i].name.toLowerCase().indexOf(headphoneSearchVal)!=-1){
+if(headphoneArray[i].name.toLowerCase().indexOf(headphoneSearchVal)!=-1||headphoneArray[i].color.toLowerCase().indexOf(headphoneSearchVal)!=-1){
   
     let itemDiv=$(`<div class="item-box" id="headphone0${i+1}"></div>`)
     let headphonetext=$(`<div class="headphone-text"></div>`);
