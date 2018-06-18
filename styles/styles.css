@@ -109,6 +109,10 @@ body {
         .main-nav .nav-right .login {
           border: none; } }
 
+.contact-nav {
+  position: static;
+  background: linear-gradient(black, black); }
+
 .home-banner {
   z-index: -1; }
   .home-banner .bannerwarp {
