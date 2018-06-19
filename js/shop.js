@@ -1,30 +1,6 @@
 (function(){
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //Check search bar  input vaild
 
    // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
@@ -60,10 +36,6 @@ function onInputBlur( ev ) {
 }
 
 
-
-
-
-
 //item hover function
 $('.item-box').hover(function(){
     $(this).find('.cover').slideDown('slow');
@@ -73,5 +45,56 @@ $('.item-box').hover(function(){
     $(this).find('.cover').fadeOut('fast');
     $(this).find('.item-button-group').fadeOut('fast');
 });
+
+//side btn function
+
+
+$(window).scroll(function(event){
+    const $ww = $(window).width();
+    const $wh = $(document.body).height();
+    if($ww<=768)
+    {
+        if($(window).scrollTop()>600&&$(window).scrollTop()<($wh*0.876))
+        {
+            $('.side-btn-group').fadeIn();
+        }
+        else{
+            $('.side-btn-group').hide();
+        }
+    }
+    
+    else{
+        $('.side-btn-group').css("display","none");
+    }
+ 
+
+});
+
+$('#show-btn').on('click',function(){
+    $(this).hide();
+    $('.side-menu').fadeIn();
+});
+
+$('#hide-btn').on('click',function(){
+    $('.side-menu').hide();
+    $('#show-btn').fadeIn();
+});
+
+ $('.side-btn').on('click',function() {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+            let target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                $('html, body').animate({
+                    scrollTop: target.offset().top
+                }, 1000);
+                $('.side-menu').hide();
+                $('#show-btn').fadeIn();
+
+                return false;
+            }
+        }
+     
+    });
 
 })(jQuery)

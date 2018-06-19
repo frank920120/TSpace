@@ -173,10 +173,7 @@
 .searchtip{
     grid-column: 1/13;
     margin:0 auto;
-    h3{
-       
 
-    }
     ul{
         width: 100%;
         li{
@@ -193,5 +190,31 @@
 
     font-family: 'Oswald', 'Roboto', sans-serif ;
 
+}
 
+.side-btn-group{
+
+    display: none;
+    
+    .side-menu{
+        display: none;
+    }
+
+    @media screen and (max-width:$phone-wide) {
+        position: fixed;
+        width: 50vw;
+        text-align: right;
+        z-index: 1000;
+        bottom: 5%;
+        right: 2%;
+       
+    }
+
+    a{
+        color: white;
+        background-color: black;
+        padding: 10px;
+        font-size: 20px;
+        border-radius: 10px;
+    }
 }
