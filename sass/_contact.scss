@@ -81,6 +81,7 @@
             border-top: 4px solid white;
             border-bottom: 4px solid white;
             padding: 10px 0;
+            color: white;
             cursor: pointer;
 
         }
@@ -122,6 +123,7 @@
             text-align: left;
             width:  350px;
             padding-left: 10px;
+          
         }
 
         }
@@ -207,6 +209,10 @@
             font-size: 150%;
         }
         
+        .mail-form label{
+            font-weight: bold;
+        }
+
         /* Individual styles */
         
         /* Haruki */

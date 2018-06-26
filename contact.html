@@ -15,12 +15,13 @@
     <title>T-Space | Contact</title>
 </head>
 <body>
-    <nav class="main-nav contact-nav">
-        
+    <header class="main-nav contact-nav">
+    
     <div class="nav-left">
         <a href="index.html"><img class="nav-logo" src="images/Tspacelogo/Tspace_logo_white.png" alt="logo"></a>
         <a href="index.html" class="nav-title"><h1><span>T</span>-SPACE</h1></a>
     </div>
+        <nav>
         <ul class="nav-right">
            <li><a href="index.html">Home</a></li>
            <li><a href="shop.html">Shop</a></li>
@@ -28,7 +29,8 @@
            <li><a href="contact.html">Contact</a></li>
            <li class="login"><a href="#0">Login In</a></li>
         </ul>
-    </nav>
+        </nav>  
+    </header>
     <div class="menu">
             <span class="menu-global menu-top"></span>
             <span class="menu-global menu-middle"></span>
@@ -60,49 +62,49 @@
                 </div>
                 <div class="email-box">
                     <h3><i class="fas fa-envelope"></i>EMAIL US</h3>
-                    <form class="mail-form">
+                    <form class="mail-form" action="#0" method="post" name="mail-form">
                            
-                                    <span class="input input--haruki">
+                                    <div class="input input--haruki">
                                             <input class="input__field input__field--haruki" type="text" id="Name" />
                                             <label class="input__label input__label--haruki" for="Name">
-                                                <span class="input__label-content input__label-content--haruki">Name</span>
+                                                <div class="input__label-content input__label-content--haruki">Name</div>
                                             </label>
-                                    </span>
+                                    </div>
                            
                           
-                                    <span class="input input--haruki">
+                                    <div class="input input--haruki">
                                             <input class="input__field input__field--haruki" type="email" id="Email" />
                                             <label class="input__label input__label--haruki" for="Email">
-                                                <span class="input__label-content input__label-content--haruki">Email</span>
+                                                <div class="input__label-content input__label-content--haruki">Email</div>
                                             </label>
-                                        </span>
+                                        </div>
                            
                             
-                                    <span class="input input--haruki">
+                                    <div class="input input--haruki">
                                             <input class="input__field input__field--haruki" type="text" id="Phone" />
                                             <label class="input__label input__label--haruki" for="Phone">
-                                                <span class="input__label-content input__label-content--haruki">Phone Number</span>
+                                                <div class="input__label-content input__label-content--haruki">Phone Number</div>
                                             </label>
-                                        </span>
+                                        </div>
                                     
-                                        <span class="textarea-container">
-                                                <p class="textarea-title" title="Click to Open Textarea">Content</p>
+                                        <div class="textarea-container">
+                                                <label for="email-content" class="textarea-title" title="Click to Open Textarea">Content</label>
                                                 <textarea name="email-content" class="email-content" id="email-content">
             
                                                 </textarea>
-                                        </span>
+                                        </div>
 
-                                        <span class="radio-group">
-                                                <h4>Do you mind telling us about your gender?</h4>
+                                        <div class="radio-group">
+                                                <label>Do you mind telling us about your gender?</label>
                                                 <input type="radio" name="gender" id="gender-male" value="male" />
                                                 <label for="gender-male"><i class="fas fa-mars"></i>Male</label>
                                                 <input type="radio" name="gender" id="gender-female" value="female" />
                                                 <label for="gender-female"><i class="fas fa-venus"></i>Female</label>
                                                 <input type="radio" name="gender" id="gender-unknown" value="unknown" checked="checked" />
                                                 <label for="gender-unknown"><i class="fas fa-lock"></i>Secret</label>
-                                        </span>
-                                        <span class="select-group">
-                                                <h4>Do you mind telling us about your age?</h4>
+                                        </div>
+                                        <div class="select-group">
+                                                <label>Do you mind telling us about your age?</label>
                                                 <select class="select-age" id="age" name="age" >
                                                 <option value="Prefer Not to Answer" selected>Prefer Not to Answer</option>
                                                 <option value="Under 18">Under 18</option>
@@ -111,14 +113,14 @@
                                                 <option value="35-44">35-44</option>
                                                 <option value="45 or Above">45 or Above</option>
                                                 </select>
-                                        </span>
-                                        <span class="checkbox-container">
-                                                <h4>Which way would you like to receive our feedback?</h4>
+                                        </div>
+                                        <div class="checkbox-container">
+                                                <label>Which way would you like to receive our feedback?</label>
                                                 <input type="checkbox" id="feedback-way-01" name="feedback-way[]" value="email" checked />
                                                 <label for="feedback-way-01">Email</label>
                                                 <input type="checkbox" id="feedback-way-02" name="feedback-way[]" value="phone"/> 
                                                 <label for="feedback-way-02">Phone</label>
-                                        </span>
+                                        </div>
                                    
                                    
                          
@@ -161,7 +163,7 @@
             <div class="login-cover">
         
                 <div class="login-form">
-                    <form action="">
+                    <form action="#0" method="post" name="login-form">
                         <h1>Log in with your account</h1>
                         <label for="user-name">Username</label>
                         <input type="text"  id="username" name="username" placeholder="Enter your username">
