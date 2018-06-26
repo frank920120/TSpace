@@ -32,8 +32,30 @@
             <span class="menu-global menu-middle"></span>
             <span class="menu-global menu-bottom"></span>
           </div>
-    <main class="signup-content">
+    <main id="signup-content">
+        <div class="signup-wrapper">
+            <form action="datahandle/signup.handle.php" id="signup" name ="signup" method="post" >
+            <label for="username" id="username">Username</label>
+        <br>
+        <input type="text" name="username" id="username"><span>   
+        </span>
+        <br>
+        <label for="password" id="password">password</label>
+        <br>
+        <input type="password" name="password" id="password">
+        <br>
+        <label for="cfpassword" id="cfpassword">confirm password</label>
+        <br>
+        <input type="password" name="cfpassword" id="cfpassword">
+        <br>
+        <label for="email" id="email">email</label>
+        <br>
+        <input type="email" name="email" id="email">
+        <br>
+        <input type="submit" name="button" id="button" value="submit">
 
+            </form>
+        </div>
 
 
 
@@ -97,6 +119,8 @@
         <script type="text/javascript" src="js/home.js" ></script>
         <script type="text/javascript" src="js/base.js" ></script>
         <script type="text/javascript" src="js/login.js" ></script>
+        <script src="formscripts/jquery.validate.min.js"></script>
+        <script src="formscripts/signup-validation.js"></script>
         <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
         </body>
         </html>
