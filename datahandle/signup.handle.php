@@ -1,14 +1,13 @@
 <?php
     require_once('connect.php');
  
-    $username = $_POST['Signusername'];
-    $password =$_POST['Signpassword'];
-    $email = $_POST['Signemail'];
+    $username = mysqli_real_escape_string($con,$_POST['Signusername']);
+    $password =mysqli_real_escape_string($con,$_POST['Signpassword']);
+    $email = mysqli_real_escape_string($con,$_POST['Signemail']);
    
 $usernameOverlap="SELECT * FROM signup WHERE username = '$username'";
 $overlapQuery=mysqli_query($con,$usernameOverlap);
 $usernameRow = mysqli_num_rows($overlapQuery);
-
 $emailOverlap="SELECT * FROM signup WHERE email = '$email'";
 $overlapEQuery=mysqli_query($con,$emailOverlap);
 $emailRow = mysqli_num_rows($overlapEQuery);

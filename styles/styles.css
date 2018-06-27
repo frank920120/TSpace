@@ -65,6 +65,10 @@ body {
         font-size: 20px;
         display: block;
         text-align: center; }
+    .main-nav .nav-right .welcome a {
+      color: white;
+      font-size: 15px;
+      text-decoration: underline; }
     .main-nav .nav-right .login {
       border: 2px solid white; }
   @media only screen and (max-width: 64em) {
@@ -769,7 +773,7 @@ footer {
       position: absolute;
       background-color: white;
       width: 50%;
-      height: 400px;
+      height: 440px;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%); }
@@ -777,6 +781,8 @@ footer {
         display: flex;
         flex-direction: column;
         justify-content: center; }
+        .login-page .login-cover .login-form form .login-error {
+          margin: 0 auto; }
         .login-page .login-cover .login-form form h1 {
           text-align: center;
           text-decoration: underline;
@@ -796,6 +802,8 @@ footer {
           font-size: 20px;
           width: 50%;
           margin-bottom: 10px; }
+        .login-page .login-cover .login-form form label.error {
+          font-size: 10px; }
         .login-page .login-cover .login-form form input {
           width: 50%;
           margin: 0 auto;
@@ -829,7 +837,7 @@ footer {
       @media screen and (max-width: 48em) {
         .login-page .login-cover .login-form {
           width: 80%;
-          height: 350px; }
+          height: 400px; }
           .login-page .login-cover .login-form form h1 {
             font-size: 20px; }
           .login-page .login-cover .login-form form label {
@@ -870,7 +878,7 @@ footer {
       text-align: center;
       text-decoration: underline;
       text-underline-position: under;
-      font-size: 60px;
+      font-size: 40px;
       margin: 0;
       margin-bottom: 30px; }
     #signup-content .signup-wrapper form {

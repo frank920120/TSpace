@@ -6,6 +6,8 @@
     left: 0;
     display: none;
     z-index:999999;
+
+ 
     .login-cover{
         position: relative;
         background-color: rgba(0,0,0,0.6);
@@ -28,7 +30,7 @@
             position: absolute;
             background-color: white;
             width: 50%;
-            height: 400px;
+            height: 440px;
             top: 50%;
             left: 50%;
             transform: translate(-50%,-50%);
@@ -36,6 +38,10 @@
                display: flex;
                flex-direction: column;
                 justify-content: center;
+                .login-error{
+                    margin:0 auto;
+                    
+                        }
             h1{
                 text-align: center;
                 text-decoration: underline;
@@ -64,6 +70,11 @@
                 font-size: 20px;
                 width: 50%;
                 margin-bottom:10px;
+
+            }
+            label.error{
+
+                font-size: 10px;
 
             }
             input{
@@ -125,7 +136,7 @@
 
         @media screen and (max-width:$phone-wide){
             width: 80%;
-            height: 350px;
+            height: 400px;
 
             form{
                 h1{
