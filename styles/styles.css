@@ -849,6 +849,53 @@ footer {
         height: 30px;
         font-size: 20px; } }
 
+#signup-content {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  #signup-content .signup-wrapper {
+    width: 80%;
+    height: 100%; }
+    #signup-content .signup-wrapper .username-error {
+      width: 100%;
+      height: 50px;
+      margin: 0; }
+      #signup-content .signup-wrapper .username-error p {
+        font-size: 30px;
+        text-align: center;
+        color: red; }
+    #signup-content .signup-wrapper .signup-header {
+      text-align: center;
+      text-decoration: underline;
+      text-underline-position: under;
+      font-size: 60px;
+      margin: 0;
+      margin-bottom: 30px; }
+    #signup-content .signup-wrapper form {
+      width: 50%;
+      height: 80%;
+      margin: 0 auto; }
+      #signup-content .signup-wrapper form label {
+        width: 100%;
+        font-size: 20px;
+        display: inline-block; }
+      #signup-content .signup-wrapper form input {
+        width: 100%;
+        display: block;
+        padding: 10px;
+        border: 2px solid black;
+        margin-bottom: 5px;
+        margin: 0 auto;
+        border-radius: 10px; }
+      #signup-content .signup-wrapper form #Signbutton {
+        background-color: black;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+        margin-top: 50px; }
+
 .error {
   color: red; }
 

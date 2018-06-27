@@ -1,0 +1,57 @@
+const $form = $('#signup');
+
+$form.validate({
+  rules: {
+    Signusername: {
+		required: true,
+		minlength:2
+	},
+	Signemail: {
+	  required: true,
+	  email: true
+	},
+	Signpassword: {
+	  minlength: 6,
+	  required: true
+    },
+    Signcfpassword:{
+        required: true,
+        minlength: 6,
+        equalTo: "[name='Signpassword']"
+    }
+  },
+	messages:{
+		Signusername:{
+            required:"*Enter your username"
+        },	
+        Signemail: {
+            required:"*Enter your email address"
+          },
+          Signpassword: {
+            required: "*Enter your password"
+          },
+          Signcfpassword:{
+
+            required:"*Confirm your password"
+
+          }
+
+
+    },
+    submitHandler: function(form) {
+        $.ajax({
+            url: '../tspace/datahandle/signup.handle.php',
+            data: $(form).serialize(),
+            type: 'POST',
+            success: function(data) {
+                if(data=='unsuccess'){
+                    $('.username-error p').html(`Username ${$('#Signusername').val()} already existed!`).css('color','red');
+                 }else{
+                    $('.username-error p').html(`Congratulation ${$('#Signusername').val()} ，Welcome to T-Space !`).css('color','black');
+                    $('#signup').trigger('reset');
+            }
+        }
+        });
+　}
+
+});

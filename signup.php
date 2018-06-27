@@ -32,33 +32,34 @@
             <span class="menu-global menu-middle"></span>
             <span class="menu-global menu-bottom"></span>
           </div>
-    <main id="signup-content">
+    <main id="signup-content"> 
+ 
         <div class="signup-wrapper">
-            <form action="datahandle/signup.handle.php" id="signup" name ="signup" method="post" >
-            <label for="username" id="username">Username</label>
+        <div class="username-error">
+        <p></p>
+        </div> 
+            <h1 class="signup-header">Sign Up Your Account</h1>
+     <form action="datahandle/signup.handle.php" id="signup" name ="signup" method="post" >
+            <label for="Signusername">Username</label>
         <br>
-        <input type="text" name="username" id="username"><span>   
-        </span>
+        <input type="text" name="Signusername" id="Signusername">
         <br>
-        <label for="password" id="password">password</label>
+        <label for="Signpassword">Password</label>
         <br>
-        <input type="password" name="password" id="password">
+        <input type="password" name="Signpassword" id="Signpassword">
         <br>
-        <label for="cfpassword" id="cfpassword">confirm password</label>
+        <label for="cfpassword">Confirm Your Password</label>
         <br>
-        <input type="password" name="cfpassword" id="cfpassword">
+        <input type="password" name="Signcfpassword" id="Signcfpassword">
         <br>
-        <label for="email" id="email">email</label>
+        <label for="Signemail">Email Address</label>
         <br>
-        <input type="email" name="email" id="email">
+        <input type="email" name="Signemail" id="Signemail">
         <br>
-        <input type="submit" name="button" id="button" value="submit">
+        <input type="submit" name="Signbutton" id="Signbutton" value="Sign up">
 
             </form>
         </div>
-
-
-
     </main>
            <footer>
             <div class="footer-header">
@@ -120,7 +121,7 @@
         <script type="text/javascript" src="js/base.js" ></script>
         <script type="text/javascript" src="js/login.js" ></script>
         <script src="formscripts/jquery.validate.min.js"></script>
-        <script src="formscripts/signup-validation.js"></script>
+        <script src="formscripts/signup-vaildations.js"></script>
         <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
         </body>
         </html>
