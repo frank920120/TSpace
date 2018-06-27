@@ -39,15 +39,22 @@ $form.validate({
 
     },
     submitHandler: function(form) {
+        $username=$('#Signusername').val();
+        $email = $('#Signemail').val();
         $.ajax({
             url: '../tspace/datahandle/signup.handle.php',
             data: $(form).serialize(),
             type: 'POST',
             success: function(data) {
-                if(data=='unsuccess'){
-                    $('.username-error p').html(`Username ${$('#Signusername').val()} already existed!`).css('color','red');
-                 }else{
-                    $('.username-error p').html(`Congratulation ${$('#Signusername').val()} ，Welcome to T-Space !`).css('color','black');
+    
+                if(data=='same username'){
+                    $('.username-error p').html(`Username:${$username} already existed!`).css('color','red');
+                 }else if(data=='same email'){
+
+                    $('.username-error p').html(`Email:${$email} already existed!`).css('color','red');
+                 }
+                 else{
+                    $('.username-error p').html(`Congratulation ${$username} ，Welcome to T-Space !`).css('color','black');
                     $('#signup').trigger('reset');
             }
         }
