@@ -24,7 +24,7 @@ require_once('datahandle/session.php');
         <a href="index.php"><img class="nav-logo" src="images/Tspacelogo/Tspace_logo_white.png" alt="logo"></a>
         <a href="index.php" class="nav-title"><h1><span>T</span>-SPACE</h1></a>
     </div>
-        <nav>
+
         <ul class="nav-right">
            <li><a href="index.php">Home</a></li>
            <li><a href="shop.php">Shop</a></li>
@@ -42,7 +42,6 @@ require_once('datahandle/session.php');
         }
            ?>
         </ul>
-        </nav>
     </header>
     <div class="menu">
             <span class="menu-global menu-top"></span>
@@ -194,8 +193,12 @@ require_once('datahandle/session.php');
         <div class="login-cover">
     
             <div class="login-form">
+<<<<<<< HEAD:shop.html
+                <form action="#0" method="post" name="login-form">
+=======
             <form action="datahandle/login.handle.php" method="POST" id="login">
                     <span class="login-error"></span>
+>>>>>>> signup:shop.php
                     <h1>Log in with your account</h1>
                     <label for="username">Username</label>
                     <input type="text"  id="username" name="username" placeholder="Enter your username">

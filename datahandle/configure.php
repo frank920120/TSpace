@@ -1,6 +1,6 @@
 <?php
 define('HOST','localhost');
-define('USERNAME','ffang_01');
+define('USERNAME','root');
 define('PASSWORD','fj920120');
-define('DATABASE','ffang_SignUp');
+define('DATABASE','signup');
 ?>
