@@ -1,3 +1,7 @@
+<?php
+
+require_once('datahandle/session.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,16 +21,26 @@
 <body>
     <header class="main-nav shop-nav">
     <div class="nav-left">
-        <a href="index.html"><img class="nav-logo" src="images/Tspacelogo/Tspace_logo_white.png" alt="logo"></a>
-        <a href="index.html" class="nav-title"><h1><span>T</span>-SPACE</h1></a>
+        <a href="index.php"><img class="nav-logo" src="images/Tspacelogo/Tspace_logo_white.png" alt="logo"></a>
+        <a href="index.php" class="nav-title"><h1><span>T</span>-SPACE</h1></a>
     </div>
         <nav>
         <ul class="nav-right">
-           <li><a href="index.html">Home</a></li>
-           <li><a href="shop.html">Shop</a></li>
-           <li><a href="about.html">About</a></li>
-           <li><a href="contact.html">Contact</a></li>
-           <li class="login"><a href="#0">Login In</a></li>
+           <li><a href="index.php">Home</a></li>
+           <li><a href="shop.php">Shop</a></li>
+           <li><a href="about.php">About</a></li>
+           <li><a href="contact.php">Contact</a></li>
+           <?php
+        if(!(isset($_SESSION['username']))){
+          echo '<li class="login"><a href="#0">Login In</a></li>';
+        }
+        else{
+        echo  '<li class="welcome"><a href="datahandle/logout.php">';  
+        echo 'Welcome,'.$loginSession;
+        echo   '</a></li>';
+
+        }
+           ?>
         </ul>
         </nav>
     </header>
@@ -159,10 +173,10 @@
     </div>
         <div class="bottom-nav">
             <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="shop.html">SHOP</a></li>
-                <li><a href="about.html">ABOUT</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="index.php">HOME</a></li>
+                <li><a href="shop.php">SHOP</a></li>
+                <li><a href="about.php">ABOUT</a></li>
+                <li><a href="contact.php">CONTACT</a></li>
                 <li class="login"><a href="#0">LOG IN</a></li>
             </ul>
         </div>
@@ -180,9 +194,10 @@
         <div class="login-cover">
     
             <div class="login-form">
-                <form action="#0" method="post" name="login-form">
+            <form action="datahandle/login.handle.php" method="POST" id="login">
+                    <span class="login-error"></span>
                     <h1>Log in with your account</h1>
-                    <label for="user-name">Username</label>
+                    <label for="username">Username</label>
                     <input type="text"  id="username" name="username" placeholder="Enter your username">
                     <div class="forgotpw">
                     <label for="password">Password</label><a href="#0">Forgot?</a>
@@ -198,7 +213,7 @@
                 </form>
                 <div class="signup">
                 <h3>Don't have an account?</h3>
-                <a href="#0">Create</a>
+                <a href="signup.php">Create</a>
                 </div>
                 <a class="close-login" href="#0">X</a>
             </div>
@@ -210,6 +225,8 @@
     <script type="text/javascript" src="js/shop.js" ></script>
     <script type="text/javascript" src="js/search.js"></script>
     <script type="text/javascript" src="js/login.js" ></script>
+    <script src="formscripts/jquery.validate.min.js"></script>
+        <script src="formscripts/login-vaildations.js"></script>
     <script src="js/classes.js"></script>
     <script src="js/base.js"></script>
     
