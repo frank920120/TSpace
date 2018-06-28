@@ -34,7 +34,7 @@ require_once('datahandle/session.php');
         }
         else{
         echo  '<li class="welcome"><a href="datahandle/logout.php">';  
-        echo 'Welcome,'.$loginSession;
+        echo $loginSession;
         echo   '</a></li>';
 
         }
@@ -88,7 +88,15 @@ require_once('datahandle/session.php');
                     <li><a href="shop.php">SHOP</a></li>
                     <li><a href="about.php">ABOUT</a></li>
                     <li><a href="contact.php">CONTACT</a></li>
-                    <li class="login"><a href="#0">LOG IN</a></li>
+                    <?php
+        if(!(isset($_SESSION['username']))){
+          echo '<li class="login"><a href="#0">LOGIN IN</a></li>';
+        }
+        else{
+        echo  '<li class="logout"><a href="datahandle/logout.php">LOG OUT</a></li>';  
+    
+        }
+           ?>
                 </ul>
             </div>
             <div class="copyright-logo">

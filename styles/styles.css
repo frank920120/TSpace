@@ -52,7 +52,7 @@ body {
     align-items: center;
     margin: 0;
     margin-right: 60px;
-    width: 380px;
+    width: 420px;
     padding: 0; }
     .main-nav .nav-right li {
       flex: 1;
@@ -68,12 +68,15 @@ body {
     .main-nav .nav-right .welcome a {
       color: white;
       font-size: 15px;
-      text-decoration: underline; }
+      text-decoration: underline;
+      padding: 10px; }
     .main-nav .nav-right .login {
       border: 2px solid white; }
   @media only screen and (max-width: 64em) {
     .main-nav .nav-left {
       margin-left: 50px; }
+      .main-nav .nav-left .nav-title {
+        font-size: 20px; }
     .main-nav .nav-right {
       margin-right: 50px; } }
   @media only screen and (max-width: 48em) {
@@ -602,6 +605,8 @@ footer {
         display: block;
         text-decoration: none;
         color: white; }
+    footer .bottom-nav ul .logout a {
+      text-decoration: underline; }
   footer .copyright-logo {
     display: flex;
     justify-content: space-between; }
@@ -903,6 +908,11 @@ footer {
         font-size: 20px;
         cursor: pointer;
         margin-top: 50px; }
+  @media only screen and (max-width: 48em) {
+    #signup-content .signup-wrapper .signup-header {
+      font-size: 25px; }
+    #signup-content .signup-wrapper form {
+      width: 80%; } }
 
 .error {
   color: red; }

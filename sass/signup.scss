@@ -58,10 +58,21 @@
 
    }
 
+   @media only screen and (max-width:$phone-wide){
 
+    .signup-wrapper{
+        .signup-header{
+            font-size: 25px;
+        }
+        form{
+                width: 80%;
+
+        }
+
+   }
 
 }
-
+}
 .error{
 
     color:red;

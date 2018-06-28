@@ -36,6 +36,7 @@ footer{
                 display: flex;
                 width: 600px;
                 margin:0 auto;
+
                 li{
                     list-style-type: none;
                     flex:1;
@@ -46,11 +47,13 @@ footer{
                     }
 
                 }
-
+                .logout a{
+                    text-decoration: underline;
+                }
 
             }
 
-
+    
         }
 
     .copyright-logo{
