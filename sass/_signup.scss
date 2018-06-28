@@ -61,12 +61,33 @@
    @media only screen and (max-width:$phone-wide){
 
     .signup-wrapper{
+
+        .username-error{
+            p{
+                font-size: 20px;
+
+    
+            }
+        }
         .signup-header{
-            font-size: 25px;
+            font-size: 20px;
         }
         form{
                 width: 80%;
+                label{
+                        font-size: 15px;
 
+
+                }
+                input{
+                    padding: 8px;
+
+
+                }
+                #Signbutton{
+
+                    margin-top:20px;
+                }
         }
 
    }

@@ -909,10 +909,18 @@ footer {
         cursor: pointer;
         margin-top: 50px; }
   @media only screen and (max-width: 48em) {
+    #signup-content .signup-wrapper .username-error p {
+      font-size: 20px; }
     #signup-content .signup-wrapper .signup-header {
-      font-size: 25px; }
+      font-size: 20px; }
     #signup-content .signup-wrapper form {
-      width: 80%; } }
+      width: 80%; }
+      #signup-content .signup-wrapper form label {
+        font-size: 15px; }
+      #signup-content .signup-wrapper form input {
+        padding: 8px; }
+      #signup-content .signup-wrapper form #Signbutton {
+        margin-top: 20px; } }
 
 .error {
   color: red; }
