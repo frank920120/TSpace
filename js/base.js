@@ -5,7 +5,14 @@ $(document).ready(function() {
         $('.nav-right').slideToggle();
     
     });
-    
+    $(window).resize(function(){
+      if(window.innerWidth > 768) {
+          $('.nav-right').removeAttr("style");
+          $('.menu span').removeClass('menu-top-click');
+          $('.menu span').removeClass('menu-middle-click');
+          $('.menu span').removeClass('menu-bottom-click');
+      }
+  });
     var Menu = {
       
         el: {
